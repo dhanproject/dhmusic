@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DHMusic V3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="prank">
+
+  <img src="meme.jpg" alt="DHMusic V3 surprise" />
+
+  <audio id="sound" autoplay>
+    <source src="sound.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    window.onload = () => {
+      const sound = document.getElementById("sound");
+      sound.volume = 1;
+      sound.currentTime = 0;
+      sound.play();
+
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      }
+
+      if (navigator.vibrate) {
+        navigator.vibrate([350, 120, 350]);
+      }
+    };
+  </script>
+
+</body>
+</html>
